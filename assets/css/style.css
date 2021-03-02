@@ -56,7 +56,12 @@
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
+   *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -154,4 +159,266 @@ sub { bottom: -.25em; }
   font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
+}
+
+/* css starts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+.wrapper{
+  width:100%;
+  margin:25px auto;
+  max-width: 1056px;
+
+}
+
+ul{list-style: none;}
+
+a{text-decoration: none;}
+
+.uppercase{text-transform: uppercase;}
+
+header{
+ position: fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100px;
+ background:rgba(0,0,0,0.6);
+ z-index: 1;
+}
+
+header > .wrapper{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+
+nav li {
+display: inline-block;
+border-right: 1px solid #fff;
+padding:3px;
+}
+
+nav li:last-child{border-right: 0px;}
+
+nav li a {
+ color:#fff;
+ transition: all 0.2s;
+ margin-right: 10px;
+    
+}
+
+nav li a:hover {
+  color:#A72475;
+  transition: all 0.2s;
+}
+
+.banner{position: relative;
+width: 100%;
+}
+
+.banner .wrapper figure{
+width:100%;
+}
+
+.banner ul .active{display: block;}
+
+.banner ul li img{width:100%;}
+
+.banner ul li{display: none;}
+
+.banner::before{
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+content: "\f053";
+position: absolute;
+top: 50%;
+left: 5%;
+font-style: normal;
+font-variant: normal;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+color: #fff;
+font-size: 30px;
+}
+
+.banner::after {
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+content: "\f054";
+position: absolute;
+right: 5%;
+top: 50%;
+font-style: normal;
+font-variant: normal;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+color: #fff;
+font-size: 30px;
+}
+
+.blogs .wrapper{
+display: flex;
+flex-wrap: wrap;
+padding:20px;
+}
+
+.blogs figure{margin: 9px;}
+
+.image {position: relative;}
+
+span{
+position: absolute;
+color:#A72475;
+font-size: 21px;
+}
+
+.image__overlay{
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height: 100%;
+background:rgba(0,0,0,0.6);
+color:#fff;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity:0;
+transition: opacity 0.25s;
+cursor: pointer;
+}
+
+.image__overlay:hover{
+opacity: 1;
+background-image: url(../images/home-content-hover.png);
+background-repeat: no-repeat;
+background-position:center;
+}
+
+footer{
+background: #000;
+padding:25px 0;
+}
+
+
+footer .wrapper span{color:#fff;}
+
+footer .wrapper ul{margin-left:49%;}
+
+
+
+footer > .wrapper li{
+display: inline-block;
+border-right: 1px solid #fff;
+padding:3px;
+}
+
+footer > .wrapper li a{
+color:#fff;
+margin-right: 10px;
+}
+footer > .wrapper li a:hover{
+color:#E30491;
+margin-right: 10px;
+}
+footer > .wrapper li:last-child{border-right: 0px;}
+
+.menu-btn {
+color: #111;
+display: none;
+font-size: 40px;
+}
+
+
+/* responsive starts */
+
+@media(max-width:991px){
+h1{
+  display:inline-block;
+  margin-right: 10%;
+}
+
+header img{
+padding:0 0 0 15px;
+}
+
+header > .wrapper{display: inline-block;}
+
+nav{display: none;}
+
+.menu-btn {
+  color: #fff;
+  display:inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+ padding:0 0 0 20px;
+}
+
+.menu-btn:hover{
+ color:#E30491;
+}
+
+.menu-btn::before{
+ content: '';
+ position: absolute;
+ background: url(../images/search-icon.png);
+ background-repeat: no-repeat;
+ width:100%;
+ height: 100%;
+ left:-30%;
+ top:25%;
+}
+
+.menu-btn ul{
+  background-color: #000;
+  display: none;
+  width: 100vw;
+  }
+
+.menu-btn ul li a{
+display: block;
+color:#fff;
+margin-bottom: 15px;
+}
+
+.menu-btn:hover ul{
+ padding:40px;
+ display: block;
+  }
+
+.blogs .wrapper{
+  display: block;
+  width: 100%;
+}
+}
+
+
+
+@media(max-width:767px){
+.blogs .wrapper{
+  margin:0;
+  padding:0;
+}
+.blogs figure img{
+  width:100%;
+  padding:0 10px;
+}
+
+footer .wrapper ul{
+  display: none;
+}
+footer span{
+ display: inline-block;
+ width: 100%;
+ font-size: 15px;
+ text-align: center;
+ 
+}
+.blogs figure:last-of-type{
+  display: none;
+}
 }
