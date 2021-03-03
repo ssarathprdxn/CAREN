@@ -368,20 +368,69 @@ footer{
 
   footer > .wrapper li:last-child{border-right: 0px;}
 
-  @media (max-width: 981px) {
+
+
+/* hamburger starts here */
+
+.hamburger {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: none;
+    
+}
+.hamburger span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.hamburger span:nth-of-type(1) {
+  top: 6px;
+    
+}
+.hamburger span:nth-of-type(2) {
+  top: 12px;
+}
+.hamburger span:nth-of-type(3) {
+  top: 18px;
+}
+.hamburger:hover span:nth-of-type(1), .hamburger:hover span:nth-of-type(3) {
+  top: 12px;
+  background-color:#E30491;;
+}
+.hamburger:hover span:nth-of-type(1) {
+  transform: rotate(45deg);
+}
+.hamburger:hover span:nth-of-type(2) {
+  opacity: 0;
+}
+.hamburger:hover span:nth-of-type(3) {
+  transform: rotate(-45deg);
+}
+
+/* hamburger ends here */
+
+
+
+  @media (max-width: 991px) {
   
-    /* hamburger menu starts */
-    .menu-btn {
-      display: block;
-      z-index: 999;
-         }
+    
+    .hamburger{display: block;}
   
-     .menu-btn:hover {
-        cursor: pointer;
-        position: relative;
-     }
+    
       
-     header nav  {
+     header nav {
       position: absolute;
       background-color: #111;
       height: 100vh;
