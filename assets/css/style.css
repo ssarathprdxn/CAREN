@@ -291,7 +291,8 @@ header > .wrapper li:last-child{border-right: 0px;}
     flex-wrap: wrap;
     padding:20px;
   }
-  .container {
+  
+  .blogs .container {
     position: relative;
     margin: 10px;
   }
@@ -319,9 +320,9 @@ header > .wrapper li:last-child{border-right: 0px;}
    
   }
   
-  .container:hover .image { opacity: 0.3;}
+  .blogs .container:hover .image { opacity: 0.3;}
   
-  .container:hover .middle {opacity:1;}
+  .blogs .container:hover .middle {opacity:1;}
 
   .blogs span{
     color:#A72475;
